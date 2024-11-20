@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Pollution in Almaty</title>
+</head>
+<body>
+    <h1>Air Quality Data</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>AQI</th>
+            <th>PM2.5</th>
+            <th>PM10</th>
+            <th>Source</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.date }}</td>
+            <td>{{ record.aqi }}</td>
+            <td>{{ record.pm25 }}</td>
+            <td>{{ record.pm10 }}</td>
+            <td>{{ record.source }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
